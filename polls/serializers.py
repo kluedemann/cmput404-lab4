@@ -9,7 +9,7 @@ class QuestionSerializer(serializers.Serializer):
         """
         Create and return a new `Question` instance, given the validated data
         """
-        return Question.object.create(**validated_data)
+        return Question.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         """
